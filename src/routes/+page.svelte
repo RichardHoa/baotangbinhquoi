@@ -17,11 +17,11 @@
 </div>
 
 <style>
-	.landing-page {
-		position: relative;
-		width: 100vw;
-		height: 100vh;
-		overflow: hidden;
-		background: #070b14;
+	@layer components {
+		.landing-page {
+			position: relative;
+			block-size: 100dvh;
+			overflow: hidden;
+		}
 	}
 </style>

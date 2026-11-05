@@ -1,0 +1,170 @@
+@layer reset, vendor, base, tokens, components, utilities;
+
+@import 'leaflet/dist/leaflet.css' layer(vendor);
+@import './leaflet-theme.css' layer(components);
+
+@layer reset {
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
+	body {
+		margin: 0;
+	}
+
+	button {
+		font: inherit;
+		color: inherit;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		*,
+		*::before,
+		*::after {
+			animation-duration: 0.01ms !important;
+			animation-iteration-count: 1 !important;
+			transition-duration: 0.01ms !important;
+			scroll-behavior: auto !important;
+		}
+	}
+}
+
+@layer tokens {
+	:root {
+		color-scheme: light dark;
+
+		/* Color: surfaces are translucent over the map, so their alpha is what
+		   keeps text readable over both bright and dark imagery. */
+		--color-bg: oklch(96% 0.012 250);
+		--color-surface: oklch(99% 0.004 250 / 0.92);
+		--color-surface-hover: oklch(93% 0.012 250 / 0.96);
+		--color-text: oklch(22% 0.03 265);
+		--color-text-muted: oklch(42% 0.03 260);
+		--color-text-disabled: oklch(62% 0.02 260);
+		--color-accent: oklch(46% 0.13 240);
+		--color-accent-soft: oklch(46% 0.13 240 / 0.12);
+		--color-accent-strong: oklch(46% 0.13 240 / 0.2);
+		--color-accent-border: oklch(46% 0.13 240 / 0.45);
+		--color-success: oklch(50% 0.12 160);
+		--color-border: oklch(22% 0.03 265 / 0.16);
+		--color-shadow: oklch(22% 0.03 265 / 0.25);
+		--color-focus: var(--color-accent);
+
+		/* Elevation */
+		--shadow-control: 0 0.5rem 1.25rem var(--color-shadow);
+		--shadow-panel: 0 0.625rem 1.875rem -0.3125rem var(--color-shadow);
+		--glow-accent: 0 0 0.5rem var(--color-accent);
+		--glow-accent-soft: 0 0 1rem var(--color-accent-soft);
+		--glow-accent-strong: 0 0 1.25rem var(--color-accent-strong);
+		--glow-success: 0 0 0.625rem var(--color-success);
+		--blur-glass: blur(0.875rem);
+		--gradient-title: linear-gradient(135deg, var(--color-text) 40%, var(--color-text-muted));
+
+		/* Spacing */
+		--space-3xs: 0.125rem;
+		--space-2xs: 0.25rem;
+		--space-xs: 0.5rem;
+		--space-sm: 0.75rem;
+		--space-md: 1rem;
+		--space-lg: 1.25rem;
+		--space-page: clamp(0.75rem, 0.5rem + 1vw, 1.5rem);
+
+		/* Sizes */
+		--size-dot: 0.5rem;
+		--size-icon: 1rem;
+		--size-logo: 2.375rem;
+		--size-navbar-max: 68.75rem;
+		--size-navbar-clearance: 5.5rem;
+		--border-thin: 0.0625rem;
+		--focus-width: 0.1875rem;
+
+		/* Radii */
+		--radius-sm: 0.5rem;
+		--radius-md: 0.75rem;
+		--radius-full: 999rem;
+
+		/* Typography */
+		--font-sans:
+			'Plus Jakarta Sans', 'Plus Jakarta Sans Fallback', system-ui, -apple-system, sans-serif;
+		--font-mono: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+		--text-2xs: 0.5rem;
+		--text-xs: 0.6875rem;
+		--text-sm: 0.75rem;
+		--text-md: 0.875rem;
+		--text-lg: clamp(0.875rem, 0.8rem + 0.3vw, 1rem);
+		--weight-semibold: 600;
+		--weight-bold: 700;
+		--weight-extrabold: 800;
+		--leading-normal: 1.5;
+		--tracking-snug: 0.02em;
+		--tracking-wide: 0.06em;
+
+		/* Motion */
+		--duration-fast: 0.2s;
+
+		/* Stacking, above the isolated map canvas */
+		--z-map-overlay: 1;
+		--z-navbar: 2;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		:root {
+			--color-bg: oklch(15% 0.02 265);
+			--color-surface: oklch(18% 0.025 265 / 0.92);
+			--color-surface-hover: oklch(27% 0.03 265 / 0.96);
+			--color-text: oklch(96% 0.01 250);
+			--color-text-muted: oklch(80% 0.03 255);
+			--color-text-disabled: oklch(55% 0.025 260);
+			--color-accent: oklch(78% 0.13 233);
+			--color-accent-soft: oklch(78% 0.13 233 / 0.14);
+			--color-accent-strong: oklch(78% 0.13 233 / 0.24);
+			--color-accent-border: oklch(78% 0.13 233 / 0.4);
+			--color-success: oklch(72% 0.15 163);
+			--color-border: oklch(100% 0 0 / 0.14);
+			--color-shadow: oklch(0% 0 0 / 0.6);
+		}
+	}
+}
+
+@layer base {
+	/* Metric-matched to Plus Jakarta Sans, so the swap barely reflows text. */
+	@font-face {
+		font-family: 'Plus Jakarta Sans Fallback';
+		src: local('Arial');
+		size-adjust: 100.6%;
+		ascent-override: 103.3%;
+		descent-override: 21.9%;
+		line-gap-override: 0%;
+	}
+
+	body {
+		min-block-size: 100dvh;
+		background-color: var(--color-bg, Canvas);
+		color: var(--color-text, CanvasText);
+		font-family: var(--font-sans, system-ui, sans-serif);
+		line-height: var(--leading-normal);
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	/* Inset so the ring sits on the control's own surface: outside it, the ring
+	   would land on satellite imagery of unknown contrast. */
+	:focus-visible {
+		outline: var(--focus-width, 0.1875rem) solid var(--color-focus, Highlight);
+		outline-offset: calc(var(--focus-width, 0.1875rem) * -1);
+	}
+}
+
+@layer utilities {
+	.sr-only {
+		position: absolute;
+		inline-size: 1px;
+		block-size: 1px;
+		margin: -1px;
+		overflow: hidden;
+		clip-path: inset(50%);
+		white-space: nowrap;
+	}
+}
