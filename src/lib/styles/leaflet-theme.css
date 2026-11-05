@@ -48,3 +48,68 @@
 	color: var(--color-text);
 	text-decoration: underline;
 }
+
+/* Pins and clusters sit directly on imagery: the light edge and dark outline
+   keep them visible on both bright and dark photos. */
+.sighting-pin,
+.sighting-cluster {
+	border: var(--border-swatch) solid var(--color-pin-edge);
+	border-radius: var(--radius-full);
+	background: var(--color-category-dong-vat);
+	box-shadow: 0 0 0 var(--border-thin) var(--color-pin-outline);
+}
+
+/* Pushed in past the light edge, so the ring lands on the fill it contrasts with. */
+.sighting-pin:focus-visible,
+.sighting-cluster:focus-visible {
+	--color-focus: var(--color-on-pin);
+	outline-offset: calc(var(--focus-width) * -2);
+}
+
+.sighting-cluster {
+	display: grid;
+	place-items: center;
+	color: var(--color-on-pin);
+	font-size: var(--text-md);
+	font-weight: var(--weight-bold);
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+	background: var(--color-surface);
+	backdrop-filter: var(--blur-glass);
+	box-shadow: var(--shadow-panel);
+	color: var(--color-text);
+}
+
+.leaflet-popup-content-wrapper {
+	border-radius: var(--radius-md);
+	padding: 0;
+}
+
+.leaflet-popup-content {
+	margin: 0;
+	font-size: var(--text-md);
+	line-height: var(--leading-normal);
+}
+
+/* Sits on the photo, whose brightness is unknown, so it brings its own backdrop. */
+.leaflet-popup-close-button {
+	--color-focus: var(--color-on-scrim);
+
+	z-index: 1;
+	inset-block-start: var(--space-2xs);
+	inset-inline-end: var(--space-2xs);
+	inline-size: var(--size-target);
+	block-size: var(--size-target);
+	border-radius: var(--radius-full);
+	background: var(--color-scrim-control);
+	color: var(--color-on-scrim);
+	font-size: var(--text-lg);
+	line-height: var(--size-target);
+}
+
+.leaflet-popup-close-button:hover {
+	background: var(--color-scrim-control-hover);
+	color: var(--color-on-scrim);
+}

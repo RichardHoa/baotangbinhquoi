@@ -1,0 +1,1119 @@
+[
+	{
+		"id": "f79d871a",
+		"lat": 10.83128,
+		"lng": 106.73941,
+		"group": "Chim",
+		"title": "Trích ré (Kịch)",
+		"subtitle": "Common Moorhen",
+		"date": "19/10/2026",
+		"time": "07:13",
+		"individuals": 2,
+		"habitat": "Đầm (sen, dương xỉ, si, dừa,...)",
+		"behavior": "Kiếm ăn",
+		"photos": [
+			{
+				"file": "common-moorhen.jpg",
+				"alt": "Trích ré (Kịch), Common Moorhen"
+			}
+		]
+	},
+	{
+		"id": "ef988883",
+		"lat": 10.83162,
+		"lng": 106.739266,
+		"group": "Chim",
+		"title": "Chích bông nâu",
+		"subtitle": "Ashy Tailorbird",
+		"date": "19/10/2026",
+		"time": "07:48",
+		"individuals": 3,
+		"habitat": "Đầm (sen, dương xỉ, si, dừa,...)",
+		"behavior": "Kiếm ăn",
+		"photos": [
+			{
+				"file": "ashy-tailorbird.jpg",
+				"alt": "Chích bông nâu, Ashy Tailorbird"
+			}
+		]
+	},
+	{
+		"id": "227906ec",
+		"lat": 10.811839,
+		"lng": 106.746179,
+		"group": "Chim",
+		"title": "Sả khoang cổ (Chéo chẹt)",
+		"subtitle": "Collared Kingfisher",
+		"date": "20/10/2026",
+		"time": "08:17",
+		"individuals": 2,
+		"habitat": "Rừng dừa nước",
+		"behavior": "Kiếm ăn",
+		"photos": [
+			{
+				"file": "collared-kingfisher-1.jpg",
+				"alt": "Sả khoang cổ (Chéo chẹt), Collared Kingfisher"
+			},
+			{
+				"file": "collared-kingfisher-2.jpg",
+				"alt": "Sả khoang cổ (Chéo chẹt), Collared Kingfisher"
+			}
+		]
+	},
+	{
+		"id": "78984bc5",
+		"lat": 10.811964,
+		"lng": 106.746186,
+		"group": "Chim",
+		"title": "Cu rốc đầu đỏ",
+		"subtitle": "Coppersmith Barbet",
+		"date": "19/10/2026",
+		"time": "08:20",
+		"individuals": 1,
+		"habitat": "Khu hỗn hợp (bàng, tràm, si, dừa,...)",
+		"behavior": "Làm tổ",
+		"photos": [
+			{
+				"file": "coppersmith-barbet.jpg",
+				"alt": "Cu rốc đầu đỏ, Coppersmith Barbet"
+			}
+		]
+	},
+	{
+		"id": "b22cf3c8",
+		"lat": 10.82488,
+		"lng": 106.741108,
+		"group": "Chim",
+		"title": "Chiền chiện bụng hung",
+		"subtitle": "Plain Prinia",
+		"date": "19/10/2026",
+		"time": "09:01",
+		"individuals": 3,
+		"habitat": "Đầm (sen, dương xỉ, si, dừa,...)",
+		"behavior": "Kiếm ăn",
+		"photos": [
+			{
+				"file": "plain-prinia.jpg",
+				"alt": "Chiền chiện bụng hung, Plain Prinia"
+			}
+		]
+	},
+	{
+		"id": "7fd27cd1",
+		"lat": 10.824909,
+		"lng": 106.741054,
+		"group": "Chim",
+		"title": "Sả khoang cổ (Chéo chẹt)",
+		"subtitle": "Collared Kingfisher",
+		"date": "19/10/2026",
+		"time": "09:06",
+		"individuals": 1,
+		"habitat": "Đầm (sen, dương xỉ, si, dừa,...)",
+		"photos": [
+			{
+				"file": "collared-kingfisher-1.jpg",
+				"alt": "Sả khoang cổ (Chéo chẹt), Collared Kingfisher"
+			},
+			{
+				"file": "collared-kingfisher-2.jpg",
+				"alt": "Sả khoang cổ (Chéo chẹt), Collared Kingfisher"
+			}
+		]
+	},
+	{
+		"id": "c469c5b5",
+		"lat": 10.83041,
+		"lng": 106.745615,
+		"group": "Chim",
+		"title": "Rẻ quạt Java",
+		"subtitle": "Sunda Pied Fantail",
+		"date": "19/10/2026",
+		"time": "09:29",
+		"individuals": 2,
+		"habitat": "Đầm (sen, dương xỉ, si, dừa,...)",
+		"behavior": "Kiếm ăn",
+		"photos": [
+			{
+				"file": "sunda-pied-fantail.jpg",
+				"alt": "Rẻ quạt Java, Sunda Pied Fantail"
+			}
+		]
+	},
+	{
+		"id": "3e123fee",
+		"lat": 10.829896,
+		"lng": 106.748528,
+		"group": "Chim",
+		"title": "Chiền chiện bụng hung",
+		"subtitle": "Plain Prinia",
+		"date": "05/09/2026",
+		"time": "08:22",
+		"individuals": 2,
+		"habitat": "Khu hỗn hợp (bàng, tràm, si, dừa,...)",
+		"behavior": "Kiếm ăn",
+		"photos": [
+			{
+				"file": "plain-prinia.jpg",
+				"alt": "Chiền chiện bụng hung, Plain Prinia"
+			}
+		]
+	},
+	{
+		"id": "7ff11a92",
+		"lat": 10.829807,
+		"lng": 106.749211,
+		"group": "Chim",
+		"title": "Rẻ quạt Java",
+		"subtitle": "Sunda Pied Fantail",
+		"date": "05/09/2026",
+		"time": "09:36",
+		"individuals": 2,
+		"habitat": "Bờ sông (ven bờ, lục bình trôi dạt)",
+		"behavior": "Kiếm ăn",
+		"photos": [
+			{
+				"file": "sunda-pied-fantail.jpg",
+				"alt": "Rẻ quạt Java, Sunda Pied Fantail"
+			}
+		]
+	},
+	{
+		"id": "0f446114",
+		"lat": 10.828943,
+		"lng": 106.747434,
+		"group": "Chim",
+		"title": "Hút mật họng nâu",
+		"subtitle": "Brown-throated Sunbird",
+		"date": "05/09/2026",
+		"time": "08:43",
+		"individuals": 3,
+		"habitat": "Khu hỗn hợp (bàng, tràm, si, dừa,...)",
+		"behavior": "Kiếm ăn",
+		"photos": [
+			{
+				"file": "brown-throated-sunbird-female.jpg",
+				"alt": "Hút mật họng nâu, Brown-throated Sunbird, con cái",
+				"sex": "Cái"
+			},
+			{
+				"file": "brown-throated-sunbird-male.jpg",
+				"alt": "Hút mật họng nâu, Brown-throated Sunbird, con đực",
+				"sex": "Đực"
+			}
+		]
+	},
+	{
+		"id": "5967fbc3",
+		"lat": 10.824453,
+		"lng": 106.74054,
+		"group": "Chim",
+		"title": "Nghệ ngực vàng",
+		"subtitle": "Common Iora",
+		"date": "05/09/2026",
+		"time": "10:06",
+		"individuals": 2,
+		"habitat": "Vườn cây ăn trái",
+		"behavior": "Kiếm ăn",
+		"photos": [
+			{
+				"file": "common-iora.jpg",
+				"alt": "Nghệ ngực vàng, Common Iora"
+			}
+		]
+	},
+	{
+		"id": "3d23aaaf",
+		"lat": 10.831329,
+		"lng": 106.740153,
+		"group": "Chim",
+		"title": "Rẻ quạt Java",
+		"subtitle": "Sunda Pied Fantail",
+		"date": "30/10/2026",
+		"time": "07:42",
+		"individuals": 5,
+		"habitat": "Khu hỗn hợp (bàng, tràm, si, dừa,...)",
+		"behavior": "Gọi bạn",
+		"photos": [
+			{
+				"file": "sunda-pied-fantail.jpg",
+				"alt": "Rẻ quạt Java, Sunda Pied Fantail"
+			}
+		]
+	},
+	{
+		"id": "f144a913",
+		"lat": 10.832074,
+		"lng": 106.739713,
+		"group": "Chim",
+		"title": "Chích bông nâu",
+		"subtitle": "Ashy Tailorbird",
+		"date": "30/10/2026",
+		"time": "07:49",
+		"individuals": 4,
+		"habitat": "Khu hỗn hợp (bàng, tràm, si, dừa,...)",
+		"behavior": "Gọi bạn",
+		"photos": [
+			{
+				"file": "ashy-tailorbird.jpg",
+				"alt": "Chích bông nâu, Ashy Tailorbird"
+			}
+		]
+	},
+	{
+		"id": "7122b546",
+		"lat": 10.832175,
+		"lng": 106.739736,
+		"group": "Chim",
+		"title": "Hút mật họng nâu",
+		"subtitle": "Brown-throated Sunbird",
+		"date": "30/10/2026",
+		"time": "07:56",
+		"individuals": 5,
+		"habitat": "Khu hỗn hợp (bàng, tràm, si, dừa,...)",
+		"behavior": "Kiếm ăn",
+		"photos": [
+			{
+				"file": "brown-throated-sunbird-female.jpg",
+				"alt": "Hút mật họng nâu, Brown-throated Sunbird, con cái",
+				"sex": "Cái"
+			},
+			{
+				"file": "brown-throated-sunbird-male.jpg",
+				"alt": "Hút mật họng nâu, Brown-throated Sunbird, con đực",
+				"sex": "Đực"
+			}
+		]
+	},
+	{
+		"id": "62d9bdf0",
+		"lat": 10.830667,
+		"lng": 106.739578,
+		"group": "Chim",
+		"title": "Chích bụng vàng",
+		"subtitle": "Golden-bellied Gerygone",
+		"date": "30/10/2026",
+		"time": "08:06",
+		"individuals": 3,
+		"photos": [
+			{
+				"file": "golden-bellied-gerygone.jpg",
+				"alt": "Chích bụng vàng, Golden-bellied Gerygone"
+			}
+		]
+	},
+	{
+		"id": "31b5aa1f",
+		"lat": 10.831424,
+		"lng": 106.739367,
+		"group": "Chim",
+		"title": "Chích bông nâu",
+		"subtitle": "Ashy Tailorbird",
+		"date": "30/10/2026",
+		"time": "08:08",
+		"individuals": 3,
+		"habitat": "Khu hỗn hợp (bàng, tràm, si, dừa,...)",
+		"photos": [
+			{
+				"file": "ashy-tailorbird.jpg",
+				"alt": "Chích bông nâu, Ashy Tailorbird"
+			}
+		]
+	},
+	{
+		"id": "d190725f",
+		"lat": 10.831466,
+		"lng": 106.739324,
+		"group": "Chim",
+		"title": "Chiền chiện bụng hung",
+		"subtitle": "Plain Prinia",
+		"date": "30/10/2026",
+		"time": "08:09",
+		"individuals": 3,
+		"habitat": "Đầm (sen, dương xỉ, si, dừa,...)",
+		"photos": [
+			{
+				"file": "plain-prinia.jpg",
+				"alt": "Chiền chiện bụng hung, Plain Prinia"
+			}
+		]
+	},
+	{
+		"id": "92626f5f",
+		"lat": 10.831449,
+		"lng": 106.739282,
+		"group": "Chim",
+		"title": "Trích ré (Kịch)",
+		"subtitle": "Common Moorhen",
+		"date": "30/10/2026",
+		"time": "08:15",
+		"individuals": 1,
+		"habitat": "Đầm (sen, dương xỉ, si, dừa,...)",
+		"photos": [
+			{
+				"file": "common-moorhen.jpg",
+				"alt": "Trích ré (Kịch), Common Moorhen"
+			}
+		]
+	},
+	{
+		"id": "7af246f3",
+		"lat": 10.831503,
+		"lng": 106.739299,
+		"group": "Chim",
+		"title": "Hút mật họng nâu",
+		"subtitle": "Brown-throated Sunbird",
+		"date": "30/10/2026",
+		"time": "08:22",
+		"individuals": 1,
+		"habitat": "Đầm (sen, dương xỉ, si, dừa,...)",
+		"behavior": "Gọi bạn",
+		"photos": [
+			{
+				"file": "brown-throated-sunbird-female.jpg",
+				"alt": "Hút mật họng nâu, Brown-throated Sunbird, con cái",
+				"sex": "Cái"
+			},
+			{
+				"file": "brown-throated-sunbird-male.jpg",
+				"alt": "Hút mật họng nâu, Brown-throated Sunbird, con đực",
+				"sex": "Đực"
+			}
+		]
+	},
+	{
+		"id": "8f7ef790",
+		"lat": 10.829803,
+		"lng": 106.73934,
+		"group": "Chim",
+		"title": "Trích ré (Kịch)",
+		"subtitle": "Common Moorhen",
+		"date": "30/10/2026",
+		"time": "08:24",
+		"individuals": 1,
+		"habitat": "Khu hỗn hợp (bàng, tràm, si, dừa,...)",
+		"photos": [
+			{
+				"file": "common-moorhen.jpg",
+				"alt": "Trích ré (Kịch), Common Moorhen"
+			}
+		]
+	},
+	{
+		"id": "cd3a628a",
+		"lat": 10.829273,
+		"lng": 106.73951,
+		"group": "Chim",
+		"title": "Hút mật họng nâu",
+		"subtitle": "Brown-throated Sunbird",
+		"date": "30/10/2026",
+		"time": "08:28",
+		"individuals": 8,
+		"habitat": "Đầm (sen, dương xỉ, si, dừa,...)",
+		"behavior": "Gọi bạn",
+		"photos": [
+			{
+				"file": "brown-throated-sunbird-female.jpg",
+				"alt": "Hút mật họng nâu, Brown-throated Sunbird, con cái",
+				"sex": "Cái"
+			},
+			{
+				"file": "brown-throated-sunbird-male.jpg",
+				"alt": "Hút mật họng nâu, Brown-throated Sunbird, con đực",
+				"sex": "Đực"
+			}
+		]
+	},
+	{
+		"id": "fc18add1",
+		"lat": 10.828981,
+		"lng": 106.748233,
+		"group": "Chim",
+		"title": "Di đá",
+		"subtitle": "Scaly-breasted Munia",
+		"date": "30/10/2026",
+		"time": "08:38",
+		"individuals": 5,
+		"photos": [
+			{
+				"file": "scaly-breasted-munia.jpg",
+				"alt": "Di đá, Scaly-breasted Munia"
+			}
+		]
+	},
+	{
+		"id": "d3d930cc",
+		"lat": 10.828776,
+		"lng": 106.748081,
+		"group": "Chim",
+		"title": "Rẻ quạt Java",
+		"subtitle": "Sunda Pied Fantail",
+		"date": "30/10/2026",
+		"time": "09:09",
+		"individuals": 3,
+		"habitat": "Khu hỗn hợp (bàng, tràm, si, dừa,...)",
+		"photos": [
+			{
+				"file": "sunda-pied-fantail.jpg",
+				"alt": "Rẻ quạt Java, Sunda Pied Fantail"
+			}
+		]
+	},
+	{
+		"id": "41b2f94e",
+		"lat": 10.824554,
+		"lng": 106.74917,
+		"group": "Chim",
+		"title": "Di đá",
+		"subtitle": "Scaly-breasted Munia",
+		"date": "30/10/2026",
+		"time": "09:21",
+		"individuals": 4,
+		"habitat": "Đầm (sen, dương xỉ, si, dừa,...)",
+		"photos": [
+			{
+				"file": "scaly-breasted-munia.jpg",
+				"alt": "Di đá, Scaly-breasted Munia"
+			}
+		]
+	},
+	{
+		"id": "ec5f8221",
+		"lat": 10.824702,
+		"lng": 106.749311,
+		"group": "Chim",
+		"title": "Di đá",
+		"subtitle": "Scaly-breasted Munia",
+		"date": "30/10/2026",
+		"time": "09:24",
+		"individuals": 10,
+		"habitat": "Đầm (sen, dương xỉ, si, dừa,...)",
+		"behavior": "Nghỉ ngơi",
+		"photos": [
+			{
+				"file": "scaly-breasted-munia.jpg",
+				"alt": "Di đá, Scaly-breasted Munia"
+			}
+		]
+	},
+	{
+		"id": "df5de12d",
+		"lat": 10.82471,
+		"lng": 106.749318,
+		"group": "Chim",
+		"title": "Chiền chiện bụng hung",
+		"subtitle": "Plain Prinia",
+		"date": "30/10/2026",
+		"time": "09:30",
+		"individuals": 2,
+		"habitat": "Đầm (sen, dương xỉ, si, dừa,...)",
+		"behavior": "Gọi bạn",
+		"photos": [
+			{
+				"file": "plain-prinia.jpg",
+				"alt": "Chiền chiện bụng hung, Plain Prinia"
+			}
+		]
+	},
+	{
+		"id": "0d56546c",
+		"lat": 10.824385,
+		"lng": 106.749269,
+		"group": "Chim",
+		"title": "Sả khoang cổ (Chéo chẹt)",
+		"subtitle": "Collared Kingfisher",
+		"date": "30/10/2026",
+		"time": "09:35",
+		"individuals": 1,
+		"habitat": "Đầm (sen, dương xỉ, si, dừa,...)",
+		"behavior": "Nghỉ ngơi",
+		"photos": [
+			{
+				"file": "collared-kingfisher-1.jpg",
+				"alt": "Sả khoang cổ (Chéo chẹt), Collared Kingfisher"
+			},
+			{
+				"file": "collared-kingfisher-2.jpg",
+				"alt": "Sả khoang cổ (Chéo chẹt), Collared Kingfisher"
+			}
+		]
+	},
+	{
+		"id": "3d6ce770",
+		"lat": 10.816129,
+		"lng": 106.71693,
+		"group": "Chim",
+		"title": "Chích bông nâu",
+		"subtitle": "Ashy Tailorbird",
+		"date": "31/10/2026",
+		"time": "07:27",
+		"individuals": 3,
+		"habitat": "Khu hỗn hợp (bàng, tràm, si, dừa,...)",
+		"behavior": "Kiếm ăn",
+		"note": "Chích bông xám tro",
+		"photos": [
+			{
+				"file": "ashy-tailorbird.jpg",
+				"alt": "Chích bông nâu, Ashy Tailorbird"
+			}
+		]
+	},
+	{
+		"id": "430e664b",
+		"lat": 10.816672,
+		"lng": 106.721828,
+		"group": "Chim",
+		"title": "Chích bông nâu",
+		"subtitle": "Ashy Tailorbird",
+		"date": "31/10/2026",
+		"time": "07:41",
+		"individuals": 5,
+		"habitat": "Khu hỗn hợp (bàng, tràm, si, dừa,...)",
+		"behavior": "Kiếm ăn",
+		"photos": [
+			{
+				"file": "ashy-tailorbird.jpg",
+				"alt": "Chích bông nâu, Ashy Tailorbird"
+			}
+		]
+	},
+	{
+		"id": "1f91f72c",
+		"lat": 10.824912,
+		"lng": 106.738737,
+		"group": "Chim",
+		"title": "Chiền chiện bụng hung",
+		"subtitle": "Plain Prinia",
+		"date": "31/10/2026",
+		"time": "08:11",
+		"individuals": 2,
+		"habitat": "Đầm (sen, dương xỉ, si, dừa,...)",
+		"behavior": "Gọi bạn",
+		"photos": [
+			{
+				"file": "plain-prinia.jpg",
+				"alt": "Chiền chiện bụng hung, Plain Prinia"
+			}
+		]
+	},
+	{
+		"id": "5fc9b10e",
+		"lat": 10.824593,
+		"lng": 106.73971,
+		"group": "Chim",
+		"title": "Sả khoang cổ (Chéo chẹt)",
+		"subtitle": "Collared Kingfisher",
+		"date": "31/10/2026",
+		"time": "12:39",
+		"individuals": 1,
+		"habitat": "Đầm (sen, dương xỉ, si, dừa,...)",
+		"behavior": "Gọi bạn",
+		"photos": [
+			{
+				"file": "collared-kingfisher-1.jpg",
+				"alt": "Sả khoang cổ (Chéo chẹt), Collared Kingfisher"
+			},
+			{
+				"file": "collared-kingfisher-2.jpg",
+				"alt": "Sả khoang cổ (Chéo chẹt), Collared Kingfisher"
+			}
+		]
+	},
+	{
+		"id": "4969ad4a",
+		"lat": 10.831377,
+		"lng": 106.739344,
+		"group": "Chim",
+		"title": "Hút mật họng nâu",
+		"subtitle": "Brown-throated Sunbird",
+		"date": "31/10/2026",
+		"time": "08:32",
+		"individuals": 8,
+		"habitat": "Khu hỗn hợp (bàng, tràm, si, dừa,...)",
+		"behavior": "Gọi bạn",
+		"photos": [
+			{
+				"file": "brown-throated-sunbird-female.jpg",
+				"alt": "Hút mật họng nâu, Brown-throated Sunbird, con cái",
+				"sex": "Cái"
+			},
+			{
+				"file": "brown-throated-sunbird-male.jpg",
+				"alt": "Hút mật họng nâu, Brown-throated Sunbird, con đực",
+				"sex": "Đực"
+			}
+		]
+	},
+	{
+		"id": "304d5803",
+		"lat": 10.828162,
+		"lng": 106.747275,
+		"group": "Lưỡng cư",
+		"title": "Kaloula pulchra",
+		"titleAuthor": "(Gray, 1831)",
+		"date": "31/10/2026",
+		"time": "20:16",
+		"individuals": 1,
+		"photos": [
+			{
+				"file": "kaloula-pulchra-304d5803.jpg",
+				"alt": "Kaloula pulchra"
+			}
+		]
+	},
+	{
+		"id": "b2ee85ac",
+		"lat": 10.828166,
+		"lng": 106.747227,
+		"group": "Bò sát",
+		"title": "Trimeresurus albolabris",
+		"titleAuthor": "(Gray, 1842)",
+		"date": "31/10/2026",
+		"time": "20:20",
+		"individuals": 1,
+		"photos": [
+			{
+				"file": "trimeresurus-albolabris-b2ee85ac.jpg",
+				"alt": "Trimeresurus albolabris"
+			}
+		]
+	},
+	{
+		"id": "7734aa17",
+		"lat": 10.828009,
+		"lng": 106.746913,
+		"group": "Lưỡng cư",
+		"title": "Duttaphrynus melanostictus",
+		"titleAuthor": "(Schneider, 1799)",
+		"date": "31/10/2026",
+		"time": "20:22",
+		"individuals": 10,
+		"photos": [
+			{
+				"file": "duttaphrynus-melanostictus-7734aa17.jpg",
+				"alt": "Duttaphrynus melanostictus"
+			}
+		]
+	},
+	{
+		"id": "b4778638",
+		"lat": 10.827777,
+		"lng": 106.746537,
+		"group": "Lưỡng cư",
+		"title": "Microhyla ninhthuanensis",
+		"titleAuthor": "(Hoang et al., 2021)",
+		"date": "31/10/2026",
+		"time": "20:32",
+		"individuals": 1,
+		"photos": []
+	},
+	{
+		"id": "7e8b4d5c",
+		"lat": 10.828165,
+		"lng": 106.747067,
+		"group": "Lưỡng cư",
+		"title": "Kaloula pulchra",
+		"titleAuthor": "(Gray, 1831)",
+		"date": "31/10/2026",
+		"time": "20:40",
+		"individuals": 1,
+		"photos": [
+			{
+				"file": "kaloula-pulchra-7e8b4d5c.jpg",
+				"alt": "Kaloula pulchra"
+			}
+		]
+	},
+	{
+		"id": "3ceb4477",
+		"lat": 10.82764,
+		"lng": 106.747815,
+		"group": "Bò sát",
+		"title": "Ahaetulla fusca",
+		"titleAuthor": "(Duméril, Bibron, & Duméril, 1854)",
+		"date": "31/10/2026",
+		"time": "20:45",
+		"individuals": 1,
+		"photos": [
+			{
+				"file": "ahaetulla-fusca-3ceb4477.jpg",
+				"alt": "Ahaetulla fusca"
+			}
+		]
+	},
+	{
+		"id": "5183587b",
+		"lat": 10.827692,
+		"lng": 106.747782,
+		"group": "Bò sát",
+		"title": "Calotes cf. irawadi",
+		"titleAuthor": "(Zug et al., 2006)",
+		"date": "31/10/2026",
+		"time": "20:46",
+		"individuals": 1,
+		"photos": [
+			{
+				"file": "calotes-cf-irawadi-5183587b.jpg",
+				"alt": "Calotes cf. irawadi"
+			}
+		]
+	},
+	{
+		"id": "7c631f97",
+		"lat": 10.826241,
+		"lng": 106.748051,
+		"group": "Lưỡng cư",
+		"title": "Kaloula pulchra",
+		"titleAuthor": "(Gray, 1831)",
+		"date": "31/10/2026",
+		"time": "21:03",
+		"individuals": 1,
+		"photos": [
+			{
+				"file": "kaloula-pulchra-7c631f97.jpg",
+				"alt": "Kaloula pulchra"
+			}
+		]
+	},
+	{
+		"id": "1f64fc6e",
+		"lat": 10.82598,
+		"lng": 106.747906,
+		"group": "Bò sát",
+		"title": "Calotes cf. irawadi",
+		"titleAuthor": "(Zug et al., 2006)",
+		"date": "31/10/2026",
+		"time": "21:04",
+		"individuals": 1,
+		"photos": [
+			{
+				"file": "calotes-cf-irawadi-1f64fc6e.jpg",
+				"alt": "Calotes cf. irawadi"
+			}
+		]
+	},
+	{
+		"id": "77f7a55c",
+		"lat": 10.825856,
+		"lng": 106.747906,
+		"group": "Bò sát",
+		"title": "Calotes cf. irawadi",
+		"titleAuthor": "(Zug et al., 2006)",
+		"date": "31/10/2026",
+		"time": "21:05",
+		"individuals": 1,
+		"photos": [
+			{
+				"file": "calotes-cf-irawadi-77f7a55c.jpg",
+				"alt": "Calotes cf. irawadi"
+			}
+		]
+	},
+	{
+		"id": "62e7ed64",
+		"lat": 10.825315,
+		"lng": 106.74798,
+		"group": "Bò sát",
+		"title": "Calotes cf. irawadi",
+		"titleAuthor": "(Zug et al., 2006)",
+		"date": "31/10/2026",
+		"time": "21:08",
+		"individuals": 1,
+		"photos": [
+			{
+				"file": "calotes-cf-irawadi-62e7ed64.jpg",
+				"alt": "Calotes cf. irawadi"
+			}
+		]
+	},
+	{
+		"id": "58d36537",
+		"lat": 10.825197,
+		"lng": 106.748983,
+		"group": "Lưỡng cư",
+		"title": "Microhyla ninhthuanensis",
+		"titleAuthor": "(Hoang et al., 2021)",
+		"date": "31/10/2026",
+		"time": "21:17",
+		"individuals": 1,
+		"photos": [
+			{
+				"file": "microhyla-ninhthuanensis-58d36537.jpg",
+				"alt": "Microhyla ninhthuanensis"
+			}
+		]
+	},
+	{
+		"id": "7a3ad014",
+		"lat": 10.825023,
+		"lng": 106.749275,
+		"group": "Lưỡng cư",
+		"title": "Microhyla ninhthuanensis",
+		"titleAuthor": "(Hoang et al., 2021)",
+		"date": "31/10/2026",
+		"time": "21:22",
+		"individuals": 1,
+		"photos": [
+			{
+				"file": "microhyla-ninhthuanensis-7a3ad014.jpg",
+				"alt": "Microhyla ninhthuanensis"
+			}
+		]
+	},
+	{
+		"id": "fbb3e6cf",
+		"lat": 10.824952,
+		"lng": 106.749288,
+		"group": "Lưỡng cư",
+		"title": "Kaloula pulchra",
+		"titleAuthor": "(Gray, 1831)",
+		"date": "31/10/2026",
+		"time": "21:24",
+		"individuals": 1,
+		"photos": [
+			{
+				"file": "kaloula-pulchra-fbb3e6cf.jpg",
+				"alt": "Kaloula pulchra"
+			}
+		]
+	},
+	{
+		"id": "9a5702e3",
+		"lat": 10.824899,
+		"lng": 106.750102,
+		"group": "Bò sát",
+		"title": "Hemidactylus frenatus",
+		"titleAuthor": "(Duméril & Bibron, 1836)",
+		"date": "31/10/2026",
+		"time": "21:42",
+		"individuals": 1,
+		"photos": [
+			{
+				"file": "hemidactylus-frenatus-9a5702e3.jpg",
+				"alt": "Hemidactylus frenatus"
+			}
+		]
+	},
+	{
+		"id": "8fe56497",
+		"lat": 10.824027,
+		"lng": 106.748012,
+		"group": "Bò sát",
+		"title": "Takydromus sexlineatus",
+		"titleAuthor": "(Daudin, 1802)",
+		"date": "31/10/2026",
+		"time": "21:59",
+		"individuals": 1,
+		"photos": []
+	},
+	{
+		"id": "c7b6391f",
+		"lat": 10.82402,
+		"lng": 106.748002,
+		"group": "Bò sát",
+		"title": "Calotes cf. irawadi",
+		"titleAuthor": "(Zug et al., 2006)",
+		"date": "31/10/2026",
+		"time": "21:59",
+		"individuals": 1,
+		"photos": [
+			{
+				"file": "calotes-cf-irawadi-c7b6391f.jpg",
+				"alt": "Calotes cf. irawadi"
+			}
+		]
+	},
+	{
+		"id": "197b005a",
+		"lat": 10.82364,
+		"lng": 106.748171,
+		"group": "Bò sát",
+		"title": "Hemidactylus frenatus",
+		"titleAuthor": "(Duméril & Bibron, 1836)",
+		"date": "31/10/2026",
+		"time": "22:01",
+		"individuals": 1,
+		"photos": []
+	},
+	{
+		"id": "1130713b",
+		"lat": 10.823771,
+		"lng": 106.748119,
+		"group": "Bò sát",
+		"title": "Hemidactylus frenatus",
+		"titleAuthor": "(Duméril & Bibron, 1836)",
+		"date": "31/10/2026",
+		"time": "22:02",
+		"individuals": 1,
+		"photos": [
+			{
+				"file": "hemidactylus-frenatus-1130713b.jpg",
+				"alt": "Hemidactylus frenatus"
+			}
+		]
+	},
+	{
+		"id": "2381ac7d",
+		"lat": 10.822553,
+		"lng": 106.748238,
+		"group": "Lưỡng cư",
+		"title": "Polypedates megacephalus",
+		"titleAuthor": "(Hallowell, 1861)",
+		"date": "31/10/2026",
+		"time": "22:06",
+		"individuals": 1,
+		"photos": [
+			{
+				"file": "polypedates-megacephalus-2381ac7d.jpg",
+				"alt": "Polypedates megacephalus"
+			}
+		]
+	},
+	{
+		"id": "4094bd31",
+		"lat": 10.821952,
+		"lng": 106.748303,
+		"group": "Lưỡng cư",
+		"title": "Polypedates megacephalus",
+		"titleAuthor": "(Hallowell, 1861)",
+		"date": "31/10/2026",
+		"time": "22:09",
+		"individuals": 1,
+		"photos": [
+			{
+				"file": "polypedates-megacephalus-4094bd31.jpg",
+				"alt": "Polypedates megacephalus"
+			}
+		]
+	},
+	{
+		"id": "41096c59",
+		"lat": 10.820993,
+		"lng": 106.748336,
+		"group": "Bò sát",
+		"title": "Hemidactylus platyurus",
+		"titleAuthor": "(Schneider, 1797)",
+		"date": "31/10/2026",
+		"time": "22:13",
+		"individuals": 2,
+		"photos": [
+			{
+				"file": "hemidactylus-platyurus-41096c59.jpg",
+				"alt": "Hemidactylus platyurus"
+			}
+		]
+	},
+	{
+		"id": "b2d53b44",
+		"lat": 10.819947,
+		"lng": 106.748532,
+		"group": "Lưỡng cư",
+		"title": "Polypedates megacephalus",
+		"titleAuthor": "(Hallowell, 1861)",
+		"date": "31/10/2026",
+		"time": "22:16",
+		"individuals": 1,
+		"photos": [
+			{
+				"file": "polypedates-megacephalus-b2d53b44.jpg",
+				"alt": "Polypedates megacephalus"
+			}
+		]
+	},
+	{
+		"id": "44ad496c",
+		"lat": 10.81779,
+		"lng": 106.748698,
+		"group": "Bò sát",
+		"title": "Calotes cf. irawadi",
+		"titleAuthor": "(Zug et al., 2006)",
+		"date": "31/10/2026",
+		"time": "22:21",
+		"individuals": 2,
+		"photos": [
+			{
+				"file": "calotes-cf-irawadi-44ad496c.jpg",
+				"alt": "Calotes cf. irawadi"
+			}
+		]
+	},
+	{
+		"id": "31333505",
+		"lat": 10.816235,
+		"lng": 106.749553,
+		"group": "Lưỡng cư",
+		"title": "Fejervarya moodiei",
+		"titleAuthor": "(Taylor, 1920)",
+		"date": "31/10/2026",
+		"time": "22:42",
+		"individuals": 1,
+		"photos": [
+			{
+				"file": "fejervarya-moodiei-31333505.jpg",
+				"alt": "Fejervarya moodiei"
+			}
+		]
+	},
+	{
+		"id": "549fc5e3",
+		"lat": 10.814615,
+		"lng": 106.749975,
+		"group": "Bò sát",
+		"title": "Takydromus sexlineatus",
+		"titleAuthor": "(Daudin, 1802)",
+		"date": "31/10/2026",
+		"time": "23:27",
+		"individuals": 1,
+		"photos": [
+			{
+				"file": "takydromus-sexlineatus-549fc5e3.jpg",
+				"alt": "Takydromus sexlineatus"
+			}
+		]
+	},
+	{
+		"id": "46d8cb8d",
+		"lat": 10.812637,
+		"lng": 106.749235,
+		"group": "Lưỡng cư",
+		"title": "Hoplobatrachus chinensis",
+		"titleAuthor": "(Osbeck, 1765)",
+		"date": "31/10/2026",
+		"time": "23:37",
+		"individuals": 1,
+		"photos": [
+			{
+				"file": "hoplobatrachus-chinensis-46d8cb8d.jpg",
+				"alt": "Hoplobatrachus chinensis"
+			}
+		]
+	},
+	{
+		"id": "f7021915",
+		"lat": 10.815325,
+		"lng": 106.747132,
+		"group": "Lưỡng cư",
+		"title": "Fejervarya moodiei",
+		"titleAuthor": "(Taylor, 1920)",
+		"date": "01/11/2026",
+		"time": "00:30",
+		"individuals": 2,
+		"photos": []
+	},
+	{
+		"id": "c139def9",
+		"lat": 10.815313,
+		"lng": 106.748735,
+		"group": "Bò sát",
+		"title": "Calotes cf. irawadi",
+		"titleAuthor": "(Zug et al., 2006)",
+		"date": "01/11/2026",
+		"time": "00:41",
+		"individuals": 1,
+		"photos": [
+			{
+				"file": "calotes-cf-irawadi-c139def9.jpg",
+				"alt": "Calotes cf. irawadi"
+			}
+		]
+	}
+]
