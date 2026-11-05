@@ -1,0 +1,50 @@
+/* Leaflet's stylesheet sits in the vendor layer, so these win on layer order
+   alone. Selectors reach into `a` because Leaflet gives those links no class. */
+
+.leaflet-container {
+	background: var(--color-bg);
+	font-family: var(--font-sans);
+}
+
+.leaflet-bar {
+	overflow: hidden;
+	border: var(--border-thin) solid var(--color-border);
+	border-radius: var(--radius-md);
+	box-shadow: var(--shadow-panel);
+}
+
+.leaflet-bar a {
+	background-color: var(--color-surface);
+	backdrop-filter: var(--blur-glass);
+	color: var(--color-text);
+	transition: background-color var(--duration-fast);
+}
+
+.leaflet-bar a:not(:last-child) {
+	border-block-end: var(--border-thin) solid var(--color-border);
+}
+
+.leaflet-bar a:hover {
+	background-color: var(--color-surface-hover);
+	color: var(--color-accent);
+}
+
+.leaflet-bar a.leaflet-disabled {
+	background-color: var(--color-surface);
+	color: var(--color-text-disabled);
+}
+
+.leaflet-control-attribution {
+	padding-block: 0;
+	padding-inline: var(--space-xs);
+	border-start-start-radius: var(--radius-sm);
+	background: var(--color-surface);
+	backdrop-filter: var(--blur-glass);
+	color: var(--color-text-muted);
+	font-size: var(--text-xs);
+}
+
+.leaflet-control-attribution a {
+	color: var(--color-text);
+	text-decoration: underline;
+}

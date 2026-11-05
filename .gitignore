@@ -33,3 +33,5 @@ project.inlang/cache/
 
 .npmrc
 .prettierignore
+
+/data
