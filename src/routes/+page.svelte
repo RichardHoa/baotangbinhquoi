@@ -1,6 +1,7 @@
 <script>
 	import Navbar from '#lib/components/Navbar.svelte';
 	import BinhQuoiMap from '#lib/components/BinhQuoiMap.svelte';
+	import { sightings } from '#lib/data/sightings.js';
 
 	let mapComponent = $state(/** @type {any} */ (null));
 
@@ -13,7 +14,7 @@
 
 <div class="landing-page">
 	<Navbar onResetView={handleResetView} />
-	<BinhQuoiMap bind:this={mapComponent} />
+	<BinhQuoiMap bind:this={mapComponent} {sightings} />
 </div>
 
 <style>
