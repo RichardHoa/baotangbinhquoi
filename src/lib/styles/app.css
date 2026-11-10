@@ -2,6 +2,7 @@
 
 @import 'leaflet/dist/leaflet.css' layer(vendor);
 @import './leaflet-theme.css' layer(components);
+@import './species-mark.css' layer(components);
 
 @layer reset {
 	*,
@@ -40,6 +41,8 @@
 		--color-bg: oklch(96% 0.012 250);
 		--color-surface: oklch(99% 0.004 250 / 0.92);
 		--color-surface-hover: oklch(93% 0.012 250 / 0.96);
+		/* The species panel is part of the page, not a layer over the map: opaque. */
+		--color-panel: oklch(99% 0.004 250);
 		--color-text: oklch(22% 0.03 265);
 		--color-text-muted: oklch(42% 0.03 260);
 		--color-text-disabled: oklch(62% 0.02 260);
@@ -106,7 +109,14 @@
 		--size-navbar-max: 68.75rem;
 		--size-navbar-clearance: 5.5rem;
 		--size-target: 2.25rem;
+		--size-target-lg: 2.75rem;
+		--size-swatch: 1.25rem;
 		--size-popup-clearance: 12rem;
+		/* The docked panel's width is a share of the screen the visitor sets; below
+		   this floor its rows stop being readable. */
+		--size-panel-min: 18rem;
+		--size-resize-handle: 0.75rem;
+		--size-sheet-max: 70dvh;
 		--ratio-photo: 4 / 3;
 		--border-thin: 0.0625rem;
 		--border-swatch: 0.125rem;
@@ -126,6 +136,9 @@
 		--text-sm: 0.75rem;
 		--text-md: 0.875rem;
 		--text-lg: clamp(0.875rem, 0.8rem + 0.3vw, 1rem);
+		--text-base: 1rem;
+		--text-lead: 1.125rem;
+		--text-title: clamp(1.25rem, 1rem + 0.6vw, 1.625rem);
 		--text-xl: 1.5rem;
 		--weight-semibold: 600;
 		--weight-bold: 700;
@@ -135,6 +148,9 @@
 		--leading-normal: 1.5;
 		--tracking-snug: 0.02em;
 		--tracking-wide: 0.06em;
+
+		/* Pins of other species while one is selected: faded, but still findable. */
+		--opacity-dimmed: 0.3;
 
 		/* Motion */
 		--duration-fast: 0.2s;
@@ -149,6 +165,7 @@
 			--color-bg: oklch(15% 0.02 265);
 			--color-surface: oklch(18% 0.025 265 / 0.92);
 			--color-surface-hover: oklch(27% 0.03 265 / 0.96);
+			--color-panel: oklch(18% 0.025 265);
 			--color-text: oklch(96% 0.01 250);
 			--color-text-muted: oklch(80% 0.03 255);
 			--color-text-disabled: oklch(55% 0.025 260);

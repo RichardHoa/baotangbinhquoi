@@ -47,7 +47,7 @@
 		.navbar-wrapper {
 			position: absolute;
 			inset-block-start: var(--space-page);
-			inset-inline: var(--space-page);
+			inset-inline: var(--space-page) calc(var(--space-page) + var(--size-page-dock, 0px));
 			z-index: var(--z-navbar);
 			display: flex;
 			justify-content: center;

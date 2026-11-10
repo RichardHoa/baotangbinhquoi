@@ -6,6 +6,12 @@
 	font-family: var(--font-sans);
 }
 
+/* Keeps the bottom controls clear of the species sheet on phones; the map sets
+   the inset for the panel's current layout. */
+.leaflet-bottom {
+	inset-block-end: var(--map-inset-block-end, 0);
+}
+
 .leaflet-bar {
 	overflow: hidden;
 	border: var(--border-thin) solid var(--color-border);
@@ -49,42 +55,15 @@
 	text-decoration: underline;
 }
 
-/* Pins sit directly on imagery: the white edge and dark outline keep them
-   visible on both bright and dark photos. The shape is drawn by the
-   pseudo-elements, so a triangle keeps its edge; the drop shadow follows them. */
+/* Pins sit directly on imagery: the white edge and dark outline from
+   `species-mark.css` keep them visible on both bright and dark photos. */
 .sighting-pin {
-	filter: drop-shadow(0 0 var(--border-thin) var(--color-pin-outline));
+	transition: opacity var(--duration-fast);
 }
 
-.sighting-pin::before,
-.sighting-pin::after {
-	content: '';
-	position: absolute;
-	inset: 0;
-}
-
-.sighting-pin::before {
-	background: var(--color-pin-edge);
-}
-
-.sighting-pin::after {
-	inset: var(--border-swatch);
-	background: var(--pin-color, var(--color-category-dong-vat));
-}
-
-.shape-circle::before,
-.shape-circle::after {
-	border-radius: var(--radius-full);
-}
-
-.shape-triangle::before,
-.shape-triangle::after {
-	clip-path: polygon(50% 0, 100% 100%, 0 100%);
-}
-
-/* Insets that give the sloped sides the same edge width as the base. */
-.shape-triangle::after {
-	inset: calc(var(--border-swatch) * 2.24) calc(var(--border-swatch) * 1.62) var(--border-swatch);
+/* Faded rather than hidden, so the other species still show where they were seen. */
+.sighting-pin.dimmed {
+	opacity: var(--opacity-dimmed);
 }
 
 /* Outside the pin, which is too small to hold a ring; the drop shadow outlines
@@ -114,23 +93,19 @@
 	line-height: var(--leading-normal);
 }
 
-/* Sits on the photo, whose brightness is unknown, so it brings its own backdrop. */
 .leaflet-popup-close-button {
-	--color-focus: var(--color-on-scrim);
-
 	z-index: 1;
 	inset-block-start: var(--space-2xs);
 	inset-inline-end: var(--space-2xs);
 	inline-size: var(--size-target);
 	block-size: var(--size-target);
 	border-radius: var(--radius-full);
-	background: var(--color-scrim-control);
-	color: var(--color-on-scrim);
+	color: var(--color-text-muted);
 	font-size: var(--text-lg);
 	line-height: var(--size-target);
 }
 
 .leaflet-popup-close-button:hover {
-	background: var(--color-scrim-control-hover);
-	color: var(--color-on-scrim);
+	background: var(--color-surface-hover);
+	color: var(--color-text);
 }

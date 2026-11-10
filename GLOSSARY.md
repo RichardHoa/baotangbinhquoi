@@ -29,7 +29,7 @@ The view of one species: its photos, names, group and a short text on its appear
 _Avoid_: Species card, species popup, detail
 
 **Species photo**:
-A photo whose filename matches a survey row. A species needs at least one to appear on the map. A filename with a sighting ID shows only on that sighting's pin; a filename with a species name, as all bird photos have, shows on every pin of that species.
+A photo whose filename matches a survey row. A species needs at least one to appear on the map. A filename with a sighting ID belongs to that sighting; a filename with a species name, as all bird photos have, belongs to every sighting of that species. The species profile shows all of a species' photos, each once.
 _Avoid_: Sighting photo, image
 
 **Unplaced species**:

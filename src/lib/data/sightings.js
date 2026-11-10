@@ -1,6 +1,6 @@
 import pins from './sightings.generated.json';
 
-/** Widths for the popup gallery (about 20rem, at up to 2x) and the full-screen view. */
+/** Widths for the profile gallery (up to 34rem, at up to 2x) and the full-screen view. */
 const photoModules = import.meta.glob('../assets/sightings/*.jpg', {
 	eager: true,
 	query: { enhanced: true, w: '1920;1280;640' }

@@ -1,0 +1,39 @@
+/* The shape and colour of a species, shared by its pins and its panel swatch.
+   The host sets the size and a positioning context; `--pin-color` sets the
+   fill. The shape is drawn by the pseudo-elements, so a triangle keeps its
+   white edge, and the drop shadow follows them. */
+
+.species-mark {
+	filter: drop-shadow(0 0 var(--border-thin) var(--color-pin-outline));
+}
+
+.species-mark::before,
+.species-mark::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+}
+
+.species-mark::before {
+	background: var(--color-pin-edge);
+}
+
+.species-mark::after {
+	inset: var(--border-swatch);
+	background: var(--pin-color, var(--color-category-dong-vat));
+}
+
+.shape-circle::before,
+.shape-circle::after {
+	border-radius: var(--radius-full);
+}
+
+.shape-triangle::before,
+.shape-triangle::after {
+	clip-path: polygon(50% 0, 100% 100%, 0 100%);
+}
+
+/* Insets that give the sloped sides the same edge width as the base. */
+.shape-triangle::after {
+	inset: calc(var(--border-swatch) * 2.24) calc(var(--border-swatch) * 1.62) var(--border-swatch);
+}

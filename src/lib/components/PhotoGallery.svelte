@@ -55,7 +55,7 @@
 	}
 
 	/**
-	 * Stops here so Escape closes only this view, not the popup around it.
+	 * Stops here so Escape closes only this view, not the profile around it.
 	 *
 	 * @param {KeyboardEvent} event
 	 */
@@ -102,7 +102,7 @@
 					class="photo"
 					src={photo.src}
 					alt={photo.alt}
-					sizes="(min-width: 23rem) 20rem, 85vw"
+					sizes="(min-width: 40rem) min(30vw, 34rem), 100vw"
 					loading="lazy"
 				/>
 			{/key}
@@ -155,12 +155,11 @@
 			position: relative;
 			aspect-ratio: var(--ratio-photo);
 			overflow: hidden;
-			border-start-start-radius: var(--radius-md);
-			border-start-end-radius: var(--radius-md);
+			border-radius: var(--radius-md);
 			background: var(--color-scrim);
 		}
 
-		/* Leaves vertical drags to the browser, so popup scrolling still works. */
+		/* Leaves vertical drags to the browser, so panel scrolling still works. */
 		.open {
 			position: relative;
 			display: block;
