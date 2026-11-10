@@ -16,6 +16,7 @@ function sighting(overrides = {}) {
 		id: 'aaaa0001',
 		lat: 10.8223,
 		lng: 106.7437,
+		species: 'common-moorhen',
 		group: 'Chim',
 		title: 'Trích ré (Kịch)',
 		subtitle: 'Common Moorhen',
@@ -27,10 +28,16 @@ function sighting(overrides = {}) {
 	};
 }
 
-/** Far enough apart that they never cluster at the default zoom. */
 const SPREAD = [
 	sighting(),
-	sighting({ id: 'aaaa0002', lat: 10.8135, lng: 106.7437, title: 'Di đá', subtitle: 'Munia' })
+	sighting({
+		id: 'aaaa0002',
+		lat: 10.8135,
+		lng: 106.7437,
+		species: 'scaly-breasted-munia',
+		title: 'Di đá',
+		subtitle: 'Munia'
+	})
 ];
 
 describe('BinhQuoiMap legend', () => {
@@ -275,31 +282,83 @@ describe('BinhQuoiMap gallery', () => {
 	});
 });
 
-describe('BinhQuoiMap clusters', () => {
-	const NEARBY = [
+describe('BinhQuoiMap pins', () => {
+	const OVERLAPPING = [
 		sighting(),
-		sighting({ id: 'aaaa0002', lat: 10.8243, lng: 106.7437, title: 'Di đá' })
+		sighting({ id: 'aaaa0002', lat: 10.8224, title: 'Di đá', species: 'scaly-breasted-munia' }),
+		sighting({ id: 'aaaa0003', title: 'Chích bông nâu', species: 'ashy-tailorbird' })
 	];
 
-	it('groups nearby pins into a cluster with a count, which splits on zoom', async () => {
-		render(BinhQuoiMap, { sightings: NEARBY });
+	/** Clicks a zoom button until Leaflet disables it at the zoom limit. */
+	async function zoomToLimit(/** @type {'Zoom in' | 'Zoom out'} */ name) {
+		const button = page.getByRole('button', { name });
+		await expect
+			.poll(
+				async () => {
+					if (button.element().getAttribute('aria-disabled') !== 'true') await button.click();
+					return button.element().getAttribute('aria-disabled');
+				},
+				{ timeout: 10_000 }
+			)
+			.toBe('true');
+	}
 
-		const cluster = page.getByRole('button', { name: 'Cụm 2 điểm' });
-		await cluster.click();
+	async function expectOwnPinForEachSighting() {
+		for (const title of ['Trích ré', 'Di đá', 'Chích bông nâu']) {
+			await expect.element(page.getByRole('button', { name: new RegExp(title) })).toBeVisible();
+		}
+		expect(document.querySelectorAll('.sighting-pin')).toHaveLength(OVERLAPPING.length);
+		expect(document.querySelectorAll('.marker-cluster, .sighting-cluster')).toHaveLength(0);
+	}
 
-		await expect.element(page.getByRole('button', { name: /Trích ré/ })).toBeVisible();
-		await expect.element(page.getByRole('button', { name: /Di đá/ })).toBeVisible();
-		await expect.element(cluster).not.toBeInTheDocument();
+	/** @param {string} title */
+	const pinOf = (title) => page.getByRole('button', { name: new RegExp(title) }).element();
+	/** @param {string} title */
+	const fillOf = (title) => getComputedStyle(pinOf(title), '::after').backgroundColor;
+
+	it('shapes each pin by its group and colours species apart within a group', async () => {
+		render(BinhQuoiMap, {
+			sightings: [
+				...OVERLAPPING,
+				sighting({ id: 'bbbb0001', title: 'Calotes', group: 'Bò sát', species: 'calotes' }),
+				sighting({ id: 'bbbb0002', title: 'Kaloula', group: 'Lưỡng cư', species: 'kaloula' })
+			]
+		});
+		await expect.element(page.getByRole('button', { name: /Kaloula/ })).toBeInTheDocument();
+
+		expect(pinOf('Trích ré').classList).toContain('shape-circle');
+		expect(pinOf('Calotes').classList).toContain('shape-square');
+		expect(pinOf('Kaloula').classList).toContain('shape-triangle');
+		expect(new Set(['Trích ré', 'Di đá', 'Chích bông nâu'].map(fillOf)).size).toBe(3);
 	});
 
-	it('fans out pins on the same spot when their cluster is clicked', async () => {
+	it('gives every pin of one species the same colour', async () => {
 		render(BinhQuoiMap, {
-			sightings: [sighting(), sighting({ id: 'aaaa0002', title: 'Di đá' })]
+			sightings: [
+				...OVERLAPPING,
+				sighting({ id: 'aaaa0004', lat: 10.81, title: 'Trích ré lần hai' })
+			]
 		});
+		await expect.element(page.getByRole('button', { name: /lần hai/ })).toBeInTheDocument();
 
-		await page.getByRole('button', { name: 'Cụm 2 điểm' }).click();
+		expect(fillOf('lần hai')).toBe(fillOf('Trích ré \\(Kịch\\)'));
+	});
 
+	it('draws every sighting as its own pin at the lowest zoom', async () => {
+		render(BinhQuoiMap, { sightings: OVERLAPPING });
 		await expect.element(page.getByRole('button', { name: /Trích ré/ })).toBeVisible();
-		await expect.element(page.getByRole('button', { name: /Di đá/ })).toBeVisible();
+
+		await zoomToLimit('Zoom out');
+
+		await expectOwnPinForEachSighting();
+	});
+
+	it('draws every sighting as its own pin at the highest zoom', async () => {
+		render(BinhQuoiMap, { sightings: OVERLAPPING });
+		await expect.element(page.getByRole('button', { name: /Trích ré/ })).toBeVisible();
+
+		await zoomToLimit('Zoom in');
+
+		await expectOwnPinForEachSighting();
 	});
 });

@@ -2,6 +2,7 @@
 	import { onMount, onDestroy, mount, unmount } from 'svelte';
 	import { browser } from '$app/env';
 	import { MAP_CENTER, DEFAULT_ZOOM } from '#lib/data/binhquoi.js';
+	import { speciesStyles } from '#lib/data/species-styles.js';
 	import MapLegend from './MapLegend.svelte';
 	import SightingPopup from './SightingPopup.svelte';
 
@@ -10,8 +11,7 @@
 	/** @type {{ sightings?: Sighting[] }} */
 	let { sightings = [] } = $props();
 
-	const PIN_SIZE = 24;
-	const CLUSTER_SIZE = 40;
+	const PIN_SIZE = 14;
 	const POPUP_WIDTH = 320;
 	const POPUP_GUTTER = 16;
 	// Leaflet's popup fade-out, so the content stays until the popup has gone
@@ -26,6 +26,8 @@
 	/** @type {ReturnType<typeof setTimeout> | undefined} */
 	let resizeTimer;
 	let overlayStack = $state(/** @type {HTMLElement | null} */ (null));
+
+	let styles = $derived(speciesStyles(sightings));
 
 	let categories = $derived([
 		{
@@ -71,13 +73,16 @@
 	 * @param {Sighting} sighting
 	 */
 	function createPin(sighting) {
+		const style = styles.get(sighting.species);
 		const pin = leaflet.marker([sighting.lat, sighting.lng], {
 			icon: leaflet.divIcon({
-				className: 'sighting-pin',
+				className: `sighting-pin shape-${style?.shape}`,
 				iconSize: [PIN_SIZE, PIN_SIZE]
 			}),
 			title: `${sighting.title}, ${sighting.date}`
 		});
+		// divIcon takes no inline style, and Leaflet rebuilds the element on every add
+		pin.on('add', () => pin.getElement()?.style.setProperty('--pin-color', style?.color ?? ''));
 		pin.bindPopup('');
 
 		/** @type {Record<string, any> | null} */
@@ -113,7 +118,7 @@
 	$effect(() => {
 		if (!dongVatLayer) return;
 		dongVatLayer.clearLayers();
-		dongVatLayer.addLayers(sightings.map(createPin));
+		for (const sighting of sightings) dongVatLayer.addLayer(createPin(sighting));
 	});
 
 	onMount(async () => {
@@ -122,8 +127,6 @@
 
 		// Dynamically import Leaflet to support SSR / Cloudflare Workers
 		const L = (await import('leaflet')).default;
-		// The cluster plugin extends the global L that Leaflet sets as it loads
-		await import('leaflet.markercluster');
 		if (destroyed) return;
 
 		const reducedMotion = prefersReducedMotion();
@@ -148,20 +151,7 @@
 		}
 		mapInstance = map;
 		leaflet = L;
-		dongVatLayer = /** @type {any} */ (L)
-			.markerClusterGroup({
-				showCoverageOnHover: false,
-				animate: !reducedMotion,
-				iconCreateFunction: (/** @type {any} */ cluster) => {
-					const count = cluster.getChildCount();
-					return L.divIcon({
-						className: 'sighting-cluster',
-						html: `<span aria-label="Cụm ${count} điểm">${count}</span>`,
-						iconSize: [CLUSTER_SIZE, CLUSTER_SIZE]
-					});
-				}
-			})
-			.addTo(map);
+		dongVatLayer = L.layerGroup().addTo(map);
 
 		// Add custom position zoom control
 		L.control.zoom({ position: 'bottomright' }).addTo(map);

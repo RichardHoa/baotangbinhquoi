@@ -15,6 +15,7 @@
  * @property {string} id
  * @property {number} lat
  * @property {number} lng
+ * @property {string} species stable key shared by every pin of one species
  * @property {string} group
  * @property {string} title
  * @property {string} [titleAuthor] set when the title is a scientific name
@@ -201,6 +202,7 @@ function toPin(row, species, photos, noteName) {
 		id: row.ID,
 		lat,
 		lng,
+		species: slugify(species),
 		group: GROUP_LABELS.get(row.Group) ?? row.Group,
 		title: author ? species : capitalize(vietnameseName ?? species),
 		...(author && { titleAuthor: author }),

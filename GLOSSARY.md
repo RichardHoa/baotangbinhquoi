@@ -13,12 +13,20 @@ The map marker for one sighting or one con người entry. A species seen severa
 _Avoid_: Marker, point
 
 **Động vật**:
-The legend category covering every sighting: birds, reptiles and amphibians. Its pins are blue.
+The legend category covering every sighting: birds, reptiles and amphibians. Its pins take their colour from their species and their shape from their group.
 _Avoid_: Animal, wildlife
 
 **Con người**:
 The legend category for people on the peninsula. Its pins are yellow; what one entry represents is not yet defined.
 _Avoid_: Human, people
+
+**Species**:
+One kind of animal recorded in the survey, such as Collared Kingfisher or _Kaloula pulchra_. Each species belongs to one group (Chim, Bò sát or Lưỡng cư) and has its own colour on the map.
+_Avoid_: Animal, loài entry
+
+**Species profile**:
+The view of one species: its photos, names, group and a short text on its appearance, behaviour and habitat. Opened from the legend or from any of the species' pins.
+_Avoid_: Species card, species popup, detail
 
 **Species photo**:
 A photo whose filename matches a survey row. A species needs at least one to appear on the map. A filename with a sighting ID shows only on that sighting's pin; a filename with a species name, as all bird photos have, shows on every pin of that species.

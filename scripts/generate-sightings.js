@@ -44,7 +44,7 @@ for (const { source, file } of photoCopies) {
 
 await writeFile(PINS_FILE, `${JSON.stringify(pins, null, '\t')}\n`);
 
-const speciesCount = new Set(pins.map((pin) => `${pin.title} ${pin.subtitle ?? ''}`)).size;
+const speciesCount = new Set(pins.map((pin) => pin.species)).size;
 console.log(`${pins.length} pins across ${speciesCount} species, ${photoCopies.length} photos`);
 console.log(`\nVietnamese names taken from notes, check these (${report.namesFromNotes.length}):`);
 for (const { species, name } of report.namesFromNotes) console.log(`  ${species}: ${name}`);

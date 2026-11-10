@@ -107,6 +107,63 @@ describe('buildSightingPins', () => {
 		});
 	});
 
+	describe('species key', () => {
+		it('gives pins of the same species the same key, and other species another', () => {
+			const { pins } = buildSightingPins(
+				[
+					row({ ID: 'a' }),
+					row({ ID: 'b' }),
+					row({ ID: 'c', 'Name of species': 'Collared Kingfisher' })
+				],
+				[MOORHEN_PHOTO, '3. Chim /Collaredkingfisher.21.8.jpeg']
+			);
+
+			expect(pins.map((pin) => pin.species)).toEqual([
+				'common-moorhen',
+				'common-moorhen',
+				'collared-kingfisher'
+			]);
+		});
+
+		it('shares the key across sightings whose photos are tied to one sighting each', () => {
+			const { pins } = buildSightingPins(
+				[
+					row({ ID: '304d5803', Group: 'Amphibian', 'Name of species': 'Kaloula pulchra' }),
+					row({ ID: '7c631f97', Group: 'Amphibian', 'Name of species': 'Kaloula pulchra' }),
+					row({ ID: '197b005a', Group: 'Reptile', 'Name of species': 'Hemidactylus frenatus' }),
+					row({ ID: '1130713b', Group: 'Reptile', 'Name of species': 'Hemidactylus frenatus' })
+				],
+				[
+					'2026.10.31/Kaloula pulchra (Gray, 1831)/304d5803.Photos.131735.jpg',
+					'2026.10.31/Kaloula pulchra (Gray, 1831)/7c631f97.Photos.142250.jpg',
+					'2026.10.31/Hemidactylus frenatus (Duméril & Bibron, 1836)/1130713b.Photos.154818.jpg'
+				]
+			);
+
+			expect(pins.map((pin) => pin.species)).toEqual([
+				'kaloula-pulchra',
+				'kaloula-pulchra',
+				'hemidactylus-frenatus',
+				'hemidactylus-frenatus'
+			]);
+		});
+
+		it('shares the key between the misspelt and correct Microhyla names', () => {
+			const { pins } = buildSightingPins(
+				[
+					row({ ID: 'b4778638', Group: 'Amphibian', 'Name of species': 'Microhyla ninthuanensis' }),
+					row({ ID: '58d36537', Group: 'Amphibian', 'Name of species': 'Microhyla ninhthuanensis' })
+				],
+				['2026.10.31/Microhyla ninhthuanensis (Hoang et al., 2021)/58d36537.Photos.151318.jpg']
+			);
+
+			expect(pins.map((pin) => pin.species)).toEqual([
+				'microhyla-ninhthuanensis',
+				'microhyla-ninhthuanensis'
+			]);
+		});
+	});
+
 	describe('photos that do not reach the map', () => {
 		it.each([
 			["Van Hesselt's Sunbird", '3. Chim /Van Hesselt_s Sunbird_Hút mật họng hồng.jpg'],

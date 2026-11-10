@@ -49,29 +49,50 @@
 	text-decoration: underline;
 }
 
-/* Pins and clusters sit directly on imagery: the light edge and dark outline
-   keep them visible on both bright and dark photos. */
-.sighting-pin,
-.sighting-cluster {
-	border: var(--border-swatch) solid var(--color-pin-edge);
+/* Pins sit directly on imagery: the white edge and dark outline keep them
+   visible on both bright and dark photos. The shape is drawn by the
+   pseudo-elements, so a triangle keeps its edge; the drop shadow follows them. */
+.sighting-pin {
+	filter: drop-shadow(0 0 var(--border-thin) var(--color-pin-outline));
+}
+
+.sighting-pin::before,
+.sighting-pin::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+}
+
+.sighting-pin::before {
+	background: var(--color-pin-edge);
+}
+
+.sighting-pin::after {
+	inset: var(--border-swatch);
+	background: var(--pin-color, var(--color-category-dong-vat));
+}
+
+.shape-circle::before,
+.shape-circle::after {
 	border-radius: var(--radius-full);
-	background: var(--color-category-dong-vat);
-	box-shadow: 0 0 0 var(--border-thin) var(--color-pin-outline);
 }
 
-/* Pushed in past the light edge, so the ring lands on the fill it contrasts with. */
-.sighting-pin:focus-visible,
-.sighting-cluster:focus-visible {
-	--color-focus: var(--color-on-pin);
-	outline-offset: calc(var(--focus-width) * -2);
+.shape-triangle::before,
+.shape-triangle::after {
+	clip-path: polygon(50% 0, 100% 100%, 0 100%);
 }
 
-.sighting-cluster {
-	display: grid;
-	place-items: center;
-	color: var(--color-on-pin);
-	font-size: var(--text-md);
-	font-weight: var(--weight-bold);
+/* Insets that give the sloped sides the same edge width as the base. */
+.shape-triangle::after {
+	inset: calc(var(--border-swatch) * 2.24) calc(var(--border-swatch) * 1.62) var(--border-swatch);
+}
+
+/* Outside the pin, which is too small to hold a ring; the drop shadow outlines
+   the ring too, so it reads on bright imagery. */
+.sighting-pin:focus-visible {
+	--color-focus: var(--color-pin-edge);
+
+	outline-offset: var(--border-thin);
 }
 
 .leaflet-popup-content-wrapper,
